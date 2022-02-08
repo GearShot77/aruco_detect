@@ -36,7 +36,7 @@ class image_convert_pub:
 
   def detect_aruco(self,img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    aruco_dict = aruco.Dictionary_get(aruco.DICT_4X4_250)
+    aruco_dict = aruco.Dictionary_get(aruco.DICT_4X4_250) # меняем словарь и размерность маркера
     parameters = aruco.DetectorParameters_create()
     corners, ids, _ = aruco.detectMarkers(gray, aruco_dict, parameters = parameters)
     output = aruco.drawDetectedMarkers(img, corners, ids)  # detect the sruco markers and display its aruco id.
@@ -51,3 +51,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
