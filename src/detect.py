@@ -11,7 +11,7 @@ class image_convert_pub:
 
   def __init__(self):
     self.image_pub = rospy.Publisher("/detected_markers",Image, queue_size=1)
-    self.id_pub = rospy.Publisher("/arudo_ID", String, queue_size=1)
+    self.id_pub = rospy.Publisher("/aruco_ID", String, queue_size=1)
     self.bridge = CvBridge()
     self.image_sub = rospy.Subscriber("/usb_cam/image_raw/", Image, self.callback)
 
