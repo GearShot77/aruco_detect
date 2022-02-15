@@ -1,6 +1,9 @@
 # aruco_detect
 
 start:
+
+
+
 1.Запускаем launch файл для стрима камеры в aruco_detect/launch.
 
 
