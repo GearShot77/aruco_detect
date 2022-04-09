@@ -39,7 +39,7 @@ class image_convert_pub:
     aruco_dict = aruco.Dictionary_get(aruco.DICT_4X4_250) # меняем словарь и размерность  маркера
     parameters = aruco.DetectorParameters_create()
     corners, ids, _ = aruco.detectMarkers(gray, aruco_dict, parameters = parameters)
-    output = aruco.drawDetectedMarkers(img, corners, ids)  # detect the sruco markers and display its aruco id.
+    output = aruco.drawDetectedMarkers(img, corners, ids)  # Вывод id aruco маркера
     return output, ids
 
 def main():
