@@ -11,4 +11,7 @@
     <remap from="image" to="/usb_cam/image_raw"/>
     <param name="autosize" value="true" />
   </node>
+  <node>
+<node pkg="aruco_ID" type="detect.py" name="aruco_ID"/>
+  </node>
 </launch>
