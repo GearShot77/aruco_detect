@@ -40,12 +40,12 @@ class image_convert_pub:
     parameters = aruco.DetectorParameters_create()
     corners, ids, _ = aruco.detectMarkers(gray, aruco_dict, parameters = parameters)
     output = aruco.drawDetectedMarkers(img, corners, ids)  # Вывод id aruco маркера
-    return output, ids
+    return output, ids 
 
 def main():
   print("Initializing ROS-node")
   rospy.init_node('detect_markers', anonymous=True)
-  print("Bring the aruco-ID in front of camera")
+  print("Bring the aruco-ID in front of camera")             #1
   ic = image_convert_pub()
   rospy.spin()
 
